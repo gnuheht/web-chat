@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import Chat from './components/ChatRoom';
-import Login from './components/Login/index.jsx';
+import Login from './components/Login';
 
 function App() {
   const [showChat,setShowChat] = useState(false);
@@ -14,8 +14,7 @@ function App() {
     <div className='App'>
       <h1>{name}</h1>
       {!showChat && <Login callback={getName}/>}
-      {showChat && <Chat name={name}/>}
-      
+      {showChat && <Chat name={name}/>}    
     </div>
     
   );

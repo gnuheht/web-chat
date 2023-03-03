@@ -1,21 +1,23 @@
 import React from "react";
 import { useState } from "react";
 
-export default function Login({callback}){
-    const [name,setName] = useState('')
+function Login({ callback }) {
+    const [name, setName] = useState("");
     const handleClick = () => {
-        callback(name);
-    }
-    return(
-        <div>
-            <input
-                type='text'value={name} 
-                onChange={(e) => 
-                {
-                    setName(e.target.value)
-                }}
-            />
-            <button onClick={handleClick}>Đăng nhập</button>
-        </div>
-    )
-}
+      callback(name);
+    };
+    return (
+      <div>
+        <input
+          type="text"
+          value={name}
+          onChange={(e) => {
+            setName(e.target.value);
+          }}
+        />
+        <button onClick={handleClick}>Đăng nhập</button>
+      </div>
+    );
+  }
+  
+  export default Login;
